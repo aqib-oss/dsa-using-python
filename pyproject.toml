@@ -1,6 +1,6 @@
 [project]
 name = "dsa-using-python"
-version = "0.0.0"
+version = "1.0.0"
 description = "Data Structures and Algorithms implemented using Python"
 authors = [{ name = "Aqib Niaz Bhat" }]
 readme = "README.md"
