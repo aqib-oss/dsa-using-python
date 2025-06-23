@@ -4,5 +4,5 @@ omit =
     *\tests\*
 
 relative_files = True
-source = dsa-using-python
+source = dsa_using_python
 branch = True
