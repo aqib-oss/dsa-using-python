@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, edited]
 
 concurrency:
-  group: "sonar_qube_gh_action-${{ github.head_ref }}"
+  group: "dsa_using_python-${{ github.head_ref }}"
   cancel-in-progress: false
 
 env:

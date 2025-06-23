@@ -1,4 +1,4 @@
-from sonar_qube_gh_action.calculator import Calculator
+from dsa_using_python.calculator import Calculator
 
 if __name__ == "__main__":
     result: int = Calculator().sum(5, 3)

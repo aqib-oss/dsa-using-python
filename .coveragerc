@@ -4,5 +4,5 @@ omit =
     *\tests\*
 
 relative_files = True
-source = sonar-qube-gh-action
+source = dsa_using_python
 branch = True

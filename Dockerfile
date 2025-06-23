@@ -30,4 +30,4 @@ RUN uv sync --locked --no-dev
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
 
-CMD ["uv", "run", "src/sonar_qube_gh_action/main.py"]
+CMD ["uv", "run", "src/dsa_using_python/main.py"]
