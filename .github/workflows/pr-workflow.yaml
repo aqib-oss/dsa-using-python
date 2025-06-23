@@ -1,0 +1,53 @@
+name: pr-workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+concurrency:
+  group: "sonar_qube_gh_action-${{ github.head_ref }}"
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  pr-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          version: "0.7.12"
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
+
+      - name: Linting check
+        run: uvx ruff check .
+
+      - name: Formatting check
+        run: uvx ruff format --check .
+
+      - name: Type consistency
+        run: uv run pyright .
+
+      - name: Unit tests
+        run: uv run pytest
+
+      - name: SonarQube Cloud scan
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMVER_GH_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

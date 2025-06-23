@@ -1,0 +1,75 @@
+[project]
+name = "sonar-qube-gh-action"
+version = "1.1.9"
+description = "Demo of SonarQube GitHub Action"
+authors = [{ name = "Aqib Niaz Bhat" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "structlog>=25.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=5.0.0",
+    "pyright>=1.1.381",
+    "ruff>=0.11.2",
+    "pytest>=8.3.5",
+    "pre-commit>=4.2.0",
+]
+
+[project.optional-dependencies]
+build = [
+    # Ensures python-semantic-release GH Action can invoke 'uv build' in its container.
+    "uv ~= 0.7.13",
+    "python-semantic-release ~= 10.0"
+]
+
+[tool.semantic_release]
+commit_parser = "conventional"
+commit_parser_options = { default_bump_level = 2 }
+major_on_zero = true
+version_variables = ["pyproject.toml:version"]
+build_command = """
+    python -m pip install -e .[build]
+    source $HOME/.local/bin/env
+    uv build
+"""
+
+[tool.semantic_release.changelog]
+default_templates = { changelog_file = "CHANGELOG.md" }
+exclude_commit_patterns = [
+    '''ci(?:\([^)]*?\))?: .+''',
+    '''style(?:\([^)]*?\))?: .+''',
+    '''test(?:\([^)]*?\))?: .+''',
+    '''build\((?!deps\): .+)''',
+    '''Merged? .*''',
+    '''Initial Commit.*''',
+    # Old semantic-release version commits
+    '''^\d+\.\d+\.\d+''',
+]
+mode = "update"
+
+[tool.semantic_release.branches.main]
+match = "(main|master)"
+prerelease = false
+prerelease_token = "rc"
+
+[tool.semantic_release.publish]
+upload_to_vcs_release = true
+
+[tool.semantic_release.remote.token]
+env = "SEMVER_GH_TOKEN"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[project.urls]
+Repository = "https://github.com/aqib-oss/sonar-qube-gh-action"
+Documentation = "https://github.com/aqib-oss/sonar-qube-gh-action/blob/main/README.md"
+Changelog = "https://github.com/aqib-oss/sonar-qube-gh-action/blob/main/CHANGELOG.md"
+Releases = "https://github.com/aqib-oss/sonar-qube-gh-action/releases"
