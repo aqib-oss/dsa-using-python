@@ -1,6 +1,6 @@
 import pytest
 
-from sonar_qube_gh_action.calculator import Calculator
+from dsa_using_python.calculator import Calculator
 
 
 def test_sum():

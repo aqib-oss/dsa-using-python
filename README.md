@@ -1,4 +1,4 @@
-# sonar-qube-gh-action
+# dsa-using-python
 
 A simple repository to demonstrate how to use the official SonarQube GitHub Action: <https://github.com/SonarSource/sonarqube-scan-action>
 Also, uses:
@@ -14,14 +14,14 @@ Also, uses:
 
 ## Stats
 
-- This project on SonarQube Cloud: <https://sonarcloud.io/project/overview?id=aqib-oss_sonar-qube-gh-action>
+- This project on SonarQube Cloud: <https://sonarcloud.io/project/overview?id=aqib-oss_dsa-using-python>
 
 | Source                        | Status                                                                                                                                                                                                        |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GitHub Actions main workflow  | [![main-workflow](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/main-workflow.yaml/badge.svg)](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/main-workflow.yaml)    |
-| GitHub Action PR workflow     | [![pr-workflow](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/pr-workflow.yaml/badge.svg)](https://github.com/aqib-oss/sonar-qube-gh-action/actions/workflows/pr-workflow.yaml)          |
-| SonarQube Quality Gate status | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_sonar-qube-gh-action&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aqib-oss_sonar-qube-gh-action) |
-| SonarQube Code Coverage       | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_sonar-qube-gh-action&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aqib-oss_sonar-qube-gh-action)                |
+| GitHub Actions main workflow  | [![main-workflow](https://github.com/aqib-oss/dsa-using-python/actions/workflows/main-workflow.yaml/badge.svg)](https://github.com/aqib-oss/dsa-using-python/actions/workflows/main-workflow.yaml)    |
+| GitHub Action PR workflow     | [![pr-workflow](https://github.com/aqib-oss/dsa-using-python/actions/workflows/pr-workflow.yaml/badge.svg)](https://github.com/aqib-oss/dsa-using-python/actions/workflows/pr-workflow.yaml)          |
+| SonarQube Quality Gate status | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_dsa-using-python&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aqib-oss_dsa-using-python) |
+| SonarQube Code Coverage       | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=aqib-oss_dsa-using-python&metric=coverage)](https://sonarcloud.io/summary/new_code?id=aqib-oss_dsa-using-python)                |
 
 ## Dev notes
 

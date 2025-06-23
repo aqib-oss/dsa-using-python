@@ -19,7 +19,7 @@
 				"docker-build"
 			],
 			"python": {
-				"file": "src/sonar_qube_gh_action/main.py"
+				"file": "src/dsa_using_python/main.py"
 			}
 		}
 	]

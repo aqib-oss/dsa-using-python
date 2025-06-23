@@ -1,7 +1,7 @@
 [project]
-name = "sonar-qube-gh-action"
-version = "1.1.9"
-description = "Demo of SonarQube GitHub Action"
+name = "dsa-using-python"
+version = "0.0.0"
+description = "Data Structures and Algorithms implemented using Python"
 authors = [{ name = "Aqib Niaz Bhat" }]
 readme = "README.md"
 requires-python = ">=3.11"
@@ -69,7 +69,7 @@ build-backend = "hatchling.build"
 universal = true
 
 [project.urls]
-Repository = "https://github.com/aqib-oss/sonar-qube-gh-action"
-Documentation = "https://github.com/aqib-oss/sonar-qube-gh-action/blob/main/README.md"
-Changelog = "https://github.com/aqib-oss/sonar-qube-gh-action/blob/main/CHANGELOG.md"
-Releases = "https://github.com/aqib-oss/sonar-qube-gh-action/releases"
+Repository = "https://github.com/aqib-oss/dsa-using-python"
+Documentation = "https://github.com/aqib-oss/dsa-using-python/blob/main/README.md"
+Changelog = "https://github.com/aqib-oss/dsa-using-python/blob/main/CHANGELOG.md"
+Releases = "https://github.com/aqib-oss/dsa-using-python/releases"
